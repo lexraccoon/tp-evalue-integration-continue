@@ -36,14 +36,14 @@ pipeline {
             }
         }
         stage('Test') {
-             steps {
-                 dir("target") {
+            steps {
+                dir("target") {
                     sh 'mv ../src .'
                     sh 'mv ../pom.xml .'
                     sh 'mvn test'
                     junit 'target/surefire-reports/*.xml'
-                 }
-             }
+                }
+            }
         }
         // Building Docker images
         stage('Building image') {
@@ -63,21 +63,22 @@ pipeline {
               }
             }
           }
+        }
 
         // Stopping Docker containers for cleaner Docker run
         stage('stop previous containers') {
-             steps {
+            steps {
                 sh 'docker ps -f name=myphpcontainer -q | xargs --no-run-if-empty docker container stop'
                 sh 'docker container ls -a -fname=myphpcontainer -q | xargs -r docker container rm'
-             }
-           }
+            }
+        }
 
         stage('Docker Run') {
            steps{
-             script {
+                script {
                     sh 'docker run -d -p 80:80 --rm --name myphpcontainer ' + registry + imageName
                 }
-             }
-          }   
-        }
+            }
+        }   
+    }
 }
