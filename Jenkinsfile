@@ -63,7 +63,6 @@ pipeline {
               }
             }
           }
-        }
 
         // Stopping Docker containers for cleaner Docker run
         stage('stop previous containers') {
@@ -79,7 +78,6 @@ pipeline {
                     sh 'docker run -d -p 80:80 --rm --name myphpcontainer ' + registry + imageName
                 }
              }
-          }    
+          }   
         }
-    }
 }
