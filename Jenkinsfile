@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Recuperation des sources') {
             steps {
-               git branch: 'main', url: 'https://github.com/lexraccoon/tp-evalue-integration-continue/blob/main/Jenkinsfile'
+               git branch: 'main', url: 'https://github.com/lexraccoon/tp-evalue-integration-continue.git'
             }
         }
         stage('Build') {
