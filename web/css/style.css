@@ -1,0 +1,74 @@
+body,html{
+    height : 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 1000px){
+    .container{
+        width: 100%!important;
+  }
+}
+.container{
+    display: flex;
+    width: 50%;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.link{
+    text-align: center;
+    width: 20%;
+    padding: 6px;
+    color: #659224;
+    border: 1.5px solid black;
+    text-decoration: none;
+    margin-bottom: 2vh;
+}
+
+.link:hover{
+    color: black;
+    background-color: #379EC1;
+    border: 1.5px solid #379EC1;
+}
+
+.fiche-agent{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bot{
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.list-objects{
+    list-style: none;
+}
+
+.list-objects li{
+    line-height: 2;
+}
+
+.title button{
+    background-color: transparent;
+    border: 1px solid #379EC1;
+    color: #659224;
+    cursor: pointer;
+}
+
+.title button:hover{
+    color: black;
+    background-color: #379EC1;
+    border: 1px solid #379EC1;
+}

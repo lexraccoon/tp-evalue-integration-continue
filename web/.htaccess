@@ -1,0 +1,4 @@
+AuthName "Page d'administration protégée, veuillez vous identifier"
+AuthType Basic
+AuthUserFile /var/www/gosecuri_web/web/.htpasswd
+Require valid-user
