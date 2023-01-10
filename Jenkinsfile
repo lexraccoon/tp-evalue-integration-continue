@@ -4,7 +4,7 @@ pipeline {
         maven 'maven'
     }
     environment{
-        imageName = "GoSecuri"
+        imageName = "gosecuri"
         registryCredentials = "nexus"
         registry = "localhost:8085"
         dockerImage = ""
