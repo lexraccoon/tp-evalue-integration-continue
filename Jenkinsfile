@@ -48,9 +48,11 @@ pipeline {
         // Building Docker images
         stage('Building image') {
           steps{
-            script {
-              dockerImage = docker.build imageName
-            }
+              dir(""){
+                script {
+                  dockerImage = docker.build imageName
+                }
+              }
           }
         }
 
