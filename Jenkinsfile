@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Recuperation des sources') {
             steps {
-               git branch: 'main', url: 'https://github.com/ziberty/GoSecuri.git'
+               git branch: 'main', url: 'https://github.com/lexraccoon/tp-evalue-integration-continue/blob/main/Jenkinsfile'
             }
         }
         stage('Build') {
@@ -48,9 +48,11 @@ pipeline {
         // Building Docker images
         stage('Building image') {
           steps{
-            script {
-              dockerImage = docker.build imageName
-            }
+              dir(""){
+                script {
+                  dockerImage = docker.build imageName
+                }
+              }
           }
         }
 
