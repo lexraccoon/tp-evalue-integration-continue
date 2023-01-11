@@ -14,11 +14,10 @@ pipeline {
         // Building Docker images
         stage('Building image') {
           steps{
-              dir(""){
-                script {
-                  dockerImage = docker.build imageName
-                }
-              }
+            script {
+                sh 'ls'
+                dockerImage = docker.build imageName
+            }
           }
         }
 
