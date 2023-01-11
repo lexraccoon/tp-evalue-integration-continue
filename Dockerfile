@@ -1,3 +1,4 @@
 #Docker File
 FROM httpd:2.4
 COPY web/ /var/www/html
+EXPOSE 80
