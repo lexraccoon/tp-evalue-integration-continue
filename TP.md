@@ -22,4 +22,4 @@ Il y a 4 étapes en plus :
 - l'arrêt de tous les containers,
 - le lancement de notre image docker.
 
-Pour les difficultés que nous avons rencontré, nous avons eu un erreur lors du build de l'image car nous avions nommé le fichier de configuration "DockerFile" au lieu de "Dockerfile". Et, la dernière difficulté fut qu'à la fin nous n'avons pas réussi à accéder par le bon URL à notre dossier web.
+Pour les difficultés que nous avons rencontré, nous avons eu une erreur lors du build de l'image car nous avions nommé le fichier de configuration "DockerFile" au lieu de "Dockerfile". Enfin, la dernière difficulté fut qu'à la fin nous n'avons pas réussi à accéder par la bonne URL à notre dossier web.
