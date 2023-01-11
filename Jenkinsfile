@@ -49,7 +49,6 @@ pipeline {
         stage('Building image') {
           steps{
             script {
-                sh 'ls'
                 dockerImage = docker.build imageName
             }
           }
