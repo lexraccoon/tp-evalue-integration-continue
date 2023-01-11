@@ -6,7 +6,7 @@ pipeline {
     environment{
         imageName = "gosecuri"
         registryCredentials = "nexus"
-        registry = "localhost:8085"
+        registry = "192.168.1.24:8085"
         dockerImage = ""
         
     }
