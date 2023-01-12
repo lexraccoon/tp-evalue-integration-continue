@@ -66,15 +66,15 @@ pipeline {
 
         stage('stop previous containers') {
             steps {
-                sh 'docker ps -f name=gosecuricontainer -q | xargs --no-run-if-empty docker container stop'
-                sh 'docker container ls -a -fname=gosecuricontainer -q | xargs -r docker container rm'
+                sh 'docker ps -f name=myphpcontainer -q | xargs --no-run-if-empty docker container stop'
+                sh 'docker container ls -a -fname=myphpcontainer -q | xargs -r docker container rm'
             }
         }
 
         stage('Docker Run') {
            steps{
                 script {
-                    sh 'docker run -d -p 80:80 --rm --name gosecuricontainer ' + registry + imageName
+                    sh 'docker run -d -p 80:80 --rm --name myphpcontainer ' + registry + imageName
                 }
             }
         }   
